@@ -15,7 +15,7 @@ export default function Chrono() {
 
     function start() {
         setRunning(true);
-        lastStartTimeRef.current = Date.now() -time;// On soustrait le temps écoulé pour reprendre là où on s'était arrêté
+        lastStartTimeRef.current = Date.now() - time;// On soustrait le temps écoulé pour reprendre là où on s'était arrêté
         intervalRef.current = setInterval(() => {
             setTime(Date.now() - lastStartTimeRef.current); // Calcule le temps écoulé depuis le dernier démarrage
         }, 10);
@@ -104,12 +104,13 @@ export default function Chrono() {
                 >
                     Reset
                 </button>
-                <button
+                {timeMemo.length > 0 ? <button
+
                     onClick={exportMemosToCSV}
                     className="px-4 py-2 bg-green-400 hover:bg-green-500 text-white rounded"
                 >
                     Exporter en CSV
-                </button>
+                </button> : null}
             </div>
 
             {timeMemo.length > 0 ? <div className="text-lg justify-between mt-4 flex w-full max-w-md">
