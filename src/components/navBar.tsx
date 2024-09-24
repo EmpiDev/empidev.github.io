@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import Link from "next/link";
 
 export default function NavBar() {
@@ -7,7 +7,7 @@ export default function NavBar() {
 
 
 
-    const handleClick = (linkName) => {
+    const handleClick = (linkName: SetStateAction<string>) => {
         setActiveLink(linkName); // Met à jour l'état avec le nom du lien cliqué
     };
 
