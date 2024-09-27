@@ -129,7 +129,7 @@ export default function Chrono() {
                         <span className="font-bold mr-2">{index + 1}.</span>
                         <span className="font-bold mr-2">{formatTime(memo.time)}</span>
                         <input
-                            className="flex-1 px-2 py-1 bg-gray-800 text-gray-100 rounded"
+                            className="flex-1 px-2 py-1 bg-gray-300 text-gray-800 rounded"
                             type="text"
                             value={memo.note}
                             onChange={(e) => {
