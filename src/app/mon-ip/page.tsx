@@ -25,7 +25,13 @@ async function fetchGeoInfo(ip: string) {
 
 export default function MonIp() {
     const [ip, setIp] = useState<string | null>(null);
-    const [geoInfo, setGeoInfo] = useState<any>(null);
+    interface GeoInfo {
+        city: string;
+        regionName: string;
+        country: string;
+    }
+
+    const [geoInfo, setGeoInfo] = useState<GeoInfo | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -39,7 +45,7 @@ export default function MonIp() {
                 const geoInfo = await fetchGeoInfo(ip);
                 setGeoInfo(geoInfo);
             } else {
-                
+
                 setError("Impossible de récupérer l'adresse IP.");
             }
             setLoading(false);
