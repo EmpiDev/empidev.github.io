@@ -12,7 +12,7 @@ export default function NavBar() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center bg-gray-900 text-gray-100">
+        <div className="flex flex-col items-center justify-center text-center bg-gray-200 rounded-b-lg p-8 ">
             <nav className="flex space-x-4">
                 <Link href="/" passHref>
                     <span
@@ -30,6 +30,15 @@ export default function NavBar() {
                             }`}
                     >
                         Compte à rebours
+                    </span>
+                </Link>
+                <Link href="/mon-ip" passHref>
+                    <span
+                        onClick={() => handleClick("Mon IP")}
+                        className={`text-xl font-bold hover:underline ${activeLink === "Mon IP" ? "text-blue-500" : ""
+                            }`}
+                    >
+                        Mon IP
                     </span>
                 </Link>
 
