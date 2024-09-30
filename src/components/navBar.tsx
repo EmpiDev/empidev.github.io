@@ -41,6 +41,15 @@ export default function NavBar() {
                         Mon IP
                     </span>
                 </Link>
+                <Link href="/todo" passHref>
+                    <span
+                        onClick={() => handleClick("Todo")}
+                        className={`text-xl font-bold hover:underline ${activeLink === "Todo" ? "text-blue-500" : ""
+                            }`}
+                    >
+                        Todo
+                    </span>
+                </Link>
 
             </nav>
         </div>
