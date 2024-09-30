@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Chronomètre",
-  description: "Un chronomètre simple pour mesurer le temps et prendre des notes puis exporter les données en CSV.",
+  title: "Apps",
+  description: "Un regroupement d'applications web",
 };
 
 export default function RootLayout({
